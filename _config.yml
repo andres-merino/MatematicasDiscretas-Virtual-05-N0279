@@ -3,3 +3,23 @@ description: "Curso Virtual de Matemáticas Discretas - PUCE"
 
 baseurl: "https://andres-merino.github.io/MatematicasDiscretas-Virtual-05-N0279"
 url: "https://andres-merino.github.io/MatematicasDiscretas-Virtual-05-N0279"
+
+# Plugins
+plugins:
+  - jekyll-feed
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+
+# Include/Exclude
+include:
+  - "_pages"
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
