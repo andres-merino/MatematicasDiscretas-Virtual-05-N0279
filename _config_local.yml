@@ -1,26 +1,5 @@
-title: "Matemáticas Discretas Virtual"
-description: "Curso Virtual de Matemáticas Discretas - PUCE"
+title: "Matemáticas Discretas - Virtual"
+description: "Curso Matemáticas Discretas - Virtual"
 
 baseurl: ""
-
-# Plugins
-plugins:
-  - jekyll-feed
-
-# Build settings
-markdown: kramdown
-highlighter: rouge
-
-# Include/Exclude
-include:
-  - "_pages"
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: "pages"
-    values:
-      layout: "page"
-
 # bundle exec jekyll serve --config _config_local.yml

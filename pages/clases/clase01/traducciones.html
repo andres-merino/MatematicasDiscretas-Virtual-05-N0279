@@ -1,0 +1,131 @@
+---
+layout: page
+title: "Traducciones"
+---
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h1>Traducción del Lenguaje Natural a la Lógica Proposicional</h1>
+        <p class="lead">Aprende a formalizar enunciados del lenguaje natural usando los conectivos lógicos fundamentales.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-info-circle"></i> 1. Introducción</h2>
+        <div class="content-box">
+            <p>
+                Formalizar un enunciado consiste en traducirlo del lenguaje natural al lenguaje de la lógica proposicional. Este proceso comprende dos tareas principales:
+            </p>
+            <ul class="styled-list">
+                <li><strong>Establecer un esquema de traducción</strong> que asocie oraciones del lenguaje natural con proposiciones formales.</li>
+                <li><strong>Traducir las conectivas</strong> del lenguaje natural a las conectivas lógicas.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-tags"></i> 2. Asignación Proposicional</h2>
+        <div class="content-box">
+            <p>
+                La primera tarea consiste en identificar las oraciones relevantes y asignarles letras proposicionales ($p, q, r, s...$). Es fundamental realizar esta asignación de forma coherente en toda la traducción.
+            </p>
+            <div class="alert alert-info">
+                <strong>Tip:</strong> Se debe depurar el texto natural para identificar las oraciones que participan activamente en el argumento, eliminando elementos accesorios o retóricos. Además, es común encontrar variantes lingüísticas para una misma proposición; en tales casos, es necesario un análisis cuidadoso para asegurar uniformidad en la representación.
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-link"></i> 3. Traducción de Conectivas</h2>
+        
+        <div class="connective-section">
+            <h3><span class="connective-symbol">¬</span> 3.1. Negación ($\lnot$)</h3>
+            <div class="content-box">
+                <p><strong>Se emplea cuando aparecen expresiones como:</strong></p>
+                <div class="example-grid">
+                    <div class="example-item">no \(q\)</div>
+                    <div class="example-item">no es el caso que \(q\)</div>
+                    <div class="example-item">no es cierto que \(q\)</div>
+                    <div class="example-item">es falso que \(q\)</div>
+                    <div class="example-item">a menos que \(q\)</div>
+                </div>
+                <div class="formula-box">
+                    La expresión <strong>ni p ni q</strong> se traduce como una conjunción de negaciones:<br>
+                    $$\lnot p \land \lnot q$$
+                </div>
+            </div>
+        </div>
+
+        <div class="connective-section">
+            <h3><span class="connective-symbol">∧</span> 3.2. Conjunción ($\land$)</h3>
+            <div class="content-box">
+                <p><strong>Ejemplos de expresiones conjuntivas:</strong></p>
+                <div class="example-grid">
+                    <div class="example-item">\(p\) y \(q\)</div>
+                    <div class="example-item">\(p\), sin embargo \(q\)</div>
+                    <div class="example-item">tanto \(p\) como \(q\)</div>
+                    <div class="example-item">\(p\) pero \(q\)</div>
+                    <div class="example-item">\(p\) aunque \(q\)</div>
+                    <div class="example-item">\(p\) y también \(q\)</div>
+                    <div class="example-item">\(p\), \(q\)</div>
+                    <div class="example-item">\(p\) a pesar de \(q\)</div>
+                </div>
+                <div class="formula-box">
+                    La expresión <strong>ni p ni q</strong> se traduce como una conjunción de negaciones:<br>
+                    $$\lnot p \land \lnot q$$
+                </div>
+            </div>
+        </div>
+
+        <div class="connective-section">
+            <h3><span class="connective-symbol">→</span> 3.3. Condicional ($\rightarrow$)</h3>
+            <div class="content-box">
+                <p><strong>Expresiones condicionales típicas:</strong></p>
+                <div class="example-grid">
+                    <div class="example-item">Si \(p\), entonces \(q\)</div>
+                    <div class="example-item">\(p\) es condición suficiente para \(q\)</div>
+                    <div class="example-item">\(q\) es condición necesaria para \(p\)</div>
+                    <div class="example-item">\(q\) si \(p\)</div>
+                    <div class="example-item">\(p\) solo si \(q\)</div>
+                    <div class="example-item">Siempre que \(p\), \(q\)</div>
+                    <div class="example-item">En caso de que \(p\), \(q\)</div>
+                    <div class="example-item">Dado que \(p\), \(q\)</div>
+                </div>
+                <div class="formula-box">
+                    Algunas expresiones como <strong>a menos que</strong> o <strong>a no ser que</strong> pueden representarse como disyunciones o condicionales. Si se formaliza como condicional, se utiliza la forma:<br>
+                    $$\lnot q \rightarrow p$$
+                </div>
+            </div>
+        </div>
+
+        <div class="connective-section">
+            <h3><span class="connective-symbol">∨</span> 3.4. Disyunción ($\lor$)</h3>
+            <div class="content-box">
+                <p><strong>Formas típicas:</strong></p>
+                <div class="example-grid">
+                    <div class="example-item">\(p\) o \(q\)</div>
+                    <div class="example-item">O bien \(p\) o \(q\)</div>
+                    <div class="example-item">\(p\) a menos que \(q\)</div>
+                    <div class="example-item">\(p\) a no ser que \(q\)</div>
+                </div>
+                <div class="formula-box">
+                    En lógica proposicional se asume, por defecto, la disyunción inclusiva. En cambio, la disyunción exclusiva debe expresarse de forma explícita:<br>
+                    $$(p \lor q) \land \lnot (p \land q)$$
+                </div>
+            </div>
+        </div>
+
+        <div class="connective-section">
+            <h3><span class="connective-symbol">↔</span> 3.5. Bicondicional ($\leftrightarrow$)</h3>
+            <div class="content-box">
+                <p><strong>Formulaciones comunes:</strong></p>
+                <div class="example-grid">
+                    <div class="example-item">\(p\) si y solo si \(q\)</div>
+                    <div class="example-item">\(p\) es equivalente a \(q\)</div>
+                    <div class="example-item">\(p\) es condición necesaria y suficiente de \(q\)</div>
+                    <div class="example-item">\(p\) solo en caso de que \(q\)</div>
+                    <div class="example-item">\(p\) cuando y solo cuando \(q\)</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
