@@ -1,0 +1,308 @@
+---
+layout: page
+title: "Ejercicios de Traducciones"
+---
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h1>Ejercicios de Traducción: Lenguaje Natural a Lógica Proposicional</h1>
+        <p class="lead">Practica la formalización de enunciados complejos paso a paso.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-dumbbell"></i> Ejercicio 1: Sistema de Acceso Remoto</h2>
+        
+        <div class="exercise-statement">
+            <div class="quote-box">
+                <p><em>«Si el servidor está encendido y la red es estable, entonces se permitirá el acceso remoto; pero si el servidor está encendido y no se verifica la identidad del usuario, entonces el acceso será denegado.»</em></p>
+            </div>
+        </div>
+
+        <div class="solution-toggle">
+            <button class="toggle-btn" onclick="toggleSolution('solution1')">
+                <i class="fas fa-chevron-right"></i> Ver Solución Paso a Paso
+            </button>
+        </div>
+
+        <div class="exercise-solution" id="solution1" style="display: none;">
+            <div class="step">
+                <div class="step-header" onclick="toggleStep('step1-1')">
+                    <h3>
+                        <span class="step-number">1</span> 
+                        Identificamos las proposiciones simples
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                </div>
+                <div class="step-content" id="step1-1" style="display: none;">
+                    <div class="content-box">
+                        <p><strong>Proposiciones que componen el enunciado:</strong></p>
+                        <div class="propositions-grid">
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$p$:</span>
+                                <span class="prop-text">El servidor está encendido.</span>
+                            </div>
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$q$:</span>
+                                <span class="prop-text">La red es estable.</span>
+                            </div>
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$s$:</span>
+                                <span class="prop-text">Se verifica la identidad del usuario.</span>
+                            </div>
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$r$:</span>
+                                <span class="prop-text">Se permitirá el acceso remoto.</span>
+                            </div>
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$d$:</span>
+                                <span class="prop-text">El acceso será denegado.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep('step1-2')">
+                    <h3>
+                        <span class="step-number">2</span> 
+                        Reconocemos los conectores del lenguaje natural
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                </div>
+                <div class="step-content" id="step1-2" style="display: none;">
+                    <div class="content-box">
+                        <div class="connectors-grid">
+                            <div class="connector-item">
+                                <span class="natural-lang">«y»</span>
+                                <span class="arrow">→</span>
+                                <span class="formal-symbol">$\land$</span>
+                                <span class="connector-name">(conjunción)</span>
+                            </div>
+                            <div class="connector-item">
+                                <span class="natural-lang">«si..., entonces...»</span>
+                                <span class="arrow">→</span>
+                                <span class="formal-symbol">$\rightarrow$</span>
+                                <span class="connector-name">(implicación)</span>
+                            </div>
+                            <div class="connector-item">
+                                <span class="natural-lang">«no»</span>
+                                <span class="arrow">→</span>
+                                <span class="formal-symbol">$\lnot$</span>
+                                <span class="connector-name">(negación)</span>
+                            </div>
+                            <div class="connector-item">
+                                <span class="natural-lang">«pero»</span>
+                                <span class="arrow">→</span>
+                                <span class="formal-symbol">$\land$</span>
+                                <span class="connector-name">(conjunción entre oraciones)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep('step1-3')">
+                    <h3>
+                        <span class="step-number">3</span> 
+                        Escribimos la fórmula compuesta
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                </div>
+                <div class="step-content" id="step1-3" style="display: none;">
+                    <div class="content-box">
+                        <p><strong>Respetando la estructura lógica del enunciado:</strong></p>
+                        <div class="final-formula">
+                            $$\bigl((p \land q) \rightarrow r\bigr) \;\land\; \bigl((p \land \lnot s) \rightarrow d\bigr)$$
+                        </div>
+                        <div class="formula-explanation">
+                            <p><strong>Explicación de la estructura:</strong></p>
+                            <ul>
+                                <li>$(p \land q) \rightarrow r$: "Si el servidor está encendido Y la red es estable, entonces se permitirá el acceso remoto"</li>
+                                <li>$(p \land \lnot s) \rightarrow d$: "Si el servidor está encendido Y NO se verifica la identidad, entonces el acceso será denegado"</li>
+                                <li>El "pero" conecta ambas proposiciones compuestas con una conjunción ($\land$)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-dumbbell"></i> Ejercicio 2: Sistema de Alertas de Seguridad</h2>
+        
+        <div class="exercise-statement">
+            <div class="quote-box">
+                <p><em>«Siempre que se detecte actividad sospechosa o se superen los umbrales de tráfico permitidos, se enviará una alerta, a menos que el sistema ya esté en modo mantenimiento o la actividad provenga de una IP segura.»</em></p>
+            </div>
+        </div>
+
+        <div class="solution-toggle">
+            <button class="toggle-btn" onclick="toggleSolution('solution2')">
+                <i class="fas fa-chevron-right"></i> Ver Solución Paso a Paso
+            </button>
+        </div>
+
+        <div class="exercise-solution" id="solution2" style="display: none;">
+            <div class="step">
+                <div class="step-header" onclick="toggleStep('step2-1')">
+                    <h3>
+                        <span class="step-number">1</span> 
+                        Identificamos las proposiciones simples
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                </div>
+                <div class="step-content" id="step2-1" style="display: none;">
+                    <div class="content-box">
+                        <p><strong>Proposiciones que componen el enunciado:</strong></p>
+                        <div class="propositions-grid">
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$p$:</span>
+                                <span class="prop-text">Se detecta actividad sospechosa.</span>
+                            </div>
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$q$:</span>
+                                <span class="prop-text">Se superan los umbrales de tráfico permitidos.</span>
+                            </div>
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$r$:</span>
+                                <span class="prop-text">El sistema está en modo mantenimiento.</span>
+                            </div>
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$s$:</span>
+                                <span class="prop-text">La actividad proviene de una IP segura.</span>
+                            </div>
+                            <div class="proposition-item">
+                                <span class="prop-symbol">$a$:</span>
+                                <span class="prop-text">Se enviará una alerta.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep('step2-2')">
+                    <h3>
+                        <span class="step-number">2</span> 
+                        Reconocemos los conectores del lenguaje natural
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                </div>
+                <div class="step-content" id="step2-2" style="display: none;">
+                    <div class="content-box">
+                        <div class="connectors-grid">
+                            <div class="connector-item">
+                                <span class="natural-lang">«o»</span>
+                                <span class="arrow">→</span>
+                                <span class="formal-symbol">$\lor$</span>
+                                <span class="connector-name">(disyunción)</span>
+                            </div>
+                            <div class="connector-item">
+                                <span class="natural-lang">«y» (implícito en «siempre que …, se …»)</span>
+                                <span class="arrow">→</span>
+                                <span class="formal-symbol">$\land$</span>
+                                <span class="connector-name">(conjunción)</span>
+                            </div>
+                            <div class="connector-item">
+                                <span class="natural-lang">«siempre que …, entonces …»</span>
+                                <span class="arrow">→</span>
+                                <span class="formal-symbol">$\rightarrow$</span>
+                                <span class="connector-name">(implicación)</span>
+                            </div>
+                            <div class="connector-item">
+                                <span class="natural-lang">«a menos que»</span>
+                                <span class="arrow">→</span>
+                                <span class="formal-symbol">$\lnot(r \lor s)$</span>
+                                <span class="connector-name">(negación de disyunción)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-header" onclick="toggleStep('step2-3')">
+                    <h3>
+                        <span class="step-number">3</span> 
+                        Escribimos la fórmula compuesta
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </h3>
+                </div>
+                <div class="step-content" id="step2-3" style="display: none;">
+                    <div class="content-box">
+                        <p><strong>Respetando la estructura lógica del enunciado:</strong></p>
+                        <div class="analysis-box">
+                            <p><strong>Para que se envíe una alerta deben cumplirse dos condiciones:</strong></p>
+                            <ol>
+                                <li><strong>Existe actividad inusual:</strong> $p \lor q$</li>
+                                <li><strong>No se dan las excepciones</strong> («modo mantenimiento» ni «IP segura»): $\lnot(r \lor s)$</li>
+                            </ol>
+                        </div>
+                        <div class="final-formula">
+                            $$\bigl[(p \lor q) \land \lnot(r \lor s)\bigr] \;\rightarrow\; a$$
+                        </div>
+                        <div class="formula-explanation">
+                            <p><strong>Explicación de la estructura:</strong></p>
+                            <ul>
+                                <li>$(p \lor q)$: "Se detecta actividad sospechosa O se superan los umbrales"</li>
+                                <li>$\lnot(r \lor s)$: "NO (el sistema está en mantenimiento O la IP es segura)"</li>
+                                <li>La conjunción de ambas condiciones implica que se enviará una alerta</li>
+                            </ul>
+                            <div class="alert alert-info">
+                                <strong>Nota:</strong> Si se prefiere explicitar que cuando se cumple la excepción no se envía alerta, puede añadirse $\bigl[(p \lor q) \land (r \lor s)\bigr] \rightarrow \lnot a$, pero basta con la primera implicación para capturar el sentido de «a menos que».
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleSolution(solutionId) {
+    const solution = document.getElementById(solutionId);
+    const button = solution.previousElementSibling.querySelector('.toggle-btn');
+    const icon = button.querySelector('i');
+    
+    if (solution.style.display === 'none') {
+        solution.style.display = 'block';
+        button.innerHTML = '<i class="fas fa-chevron-down"></i> Ocultar Solución';
+    } else {
+        solution.style.display = 'none';
+        button.innerHTML = '<i class="fas fa-chevron-right"></i> Ver Solución Paso a Paso';
+    }
+}
+
+function toggleStep(stepId) {
+    const stepContent = document.getElementById(stepId);
+    const stepHeader = stepContent.previousElementSibling;
+    const icon = stepHeader.querySelector('.toggle-icon');
+    
+    if (stepContent.style.display === 'none') {
+        stepContent.style.display = 'block';
+        icon.classList.remove('fa-chevron-down');
+        icon.classList.add('fa-chevron-up');
+    } else {
+        stepContent.style.display = 'none';
+        icon.classList.remove('fa-chevron-up');
+        icon.classList.add('fa-chevron-down');
+    }
+}
+</script>
+
+<footer class="content-footer">
+    <div class="footer-content">
+        <div class="credits">
+            <p><strong>Andrés Merino</strong></p>
+            <p>© 2025 | Pontificia Universidad Católica del Ecuador</p>
+            <p>Docente-Investigador</p>
+        </div>
+        <div class="footer-logo">
+            <img src="{{ site.baseurl }}/assets/icons/logoPUCE_04_b.png" alt="Logo PUCE" width="80">
+        </div>
+    </div>
+</footer>
