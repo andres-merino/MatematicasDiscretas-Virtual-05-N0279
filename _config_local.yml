@@ -1,0 +1,5 @@
+title: "Matemáticas Discretas Virtual"
+description: "Curso Virtual de Matemáticas Discretas - PUCE"
+
+baseurl: ""
+# bundle exec jekyll serve --config _config_local.yml
