@@ -262,37 +262,9 @@ title: "Ejercicios de Traducciones"
     </div>
 </div>
 
-<script>
-function toggleSolution(solutionId) {
-    const solution = document.getElementById(solutionId);
-    const button = solution.previousElementSibling.querySelector('.toggle-btn');
-    const icon = button.querySelector('i');
-    
-    if (solution.style.display === 'none') {
-        solution.style.display = 'block';
-        button.innerHTML = '<i class="fas fa-chevron-down"></i> Ocultar Solución';
-    } else {
-        solution.style.display = 'none';
-        button.innerHTML = '<i class="fas fa-chevron-right"></i> Ver Solución Paso a Paso';
-    }
-}
-
-function toggleStep(stepId) {
-    const stepContent = document.getElementById(stepId);
-    const stepHeader = stepContent.previousElementSibling;
-    const icon = stepHeader.querySelector('.toggle-icon');
-    
-    if (stepContent.style.display === 'none') {
-        stepContent.style.display = 'block';
-        icon.classList.remove('fa-chevron-down');
-        icon.classList.add('fa-chevron-up');
-    } else {
-        stepContent.style.display = 'none';
-        icon.classList.remove('fa-chevron-up');
-        icon.classList.add('fa-chevron-down');
-    }
-}
-</script>
+<!-- Common CSS and JS for exercises -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/exercises.css">
+<script src="{{ site.baseurl }}/assets/js/common-exercises.js"></script>
 
 <footer class="content-footer">
     <div class="footer-content">

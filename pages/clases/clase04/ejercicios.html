@@ -132,21 +132,9 @@ title: "Ejercicios de Conjuntos"
     </div>
 </div>
 
-<script>
-function toggleSolution(solutionId) {
-    const solution = document.getElementById(solutionId);
-    const button = solution.previousElementSibling.querySelector('.toggle-btn');
-    const icon = button.querySelector('i');
-    
-    if (solution.style.display === 'none') {
-        solution.style.display = 'block';
-        button.innerHTML = '<i class="fas fa-chevron-down"></i> Ocultar Solución';
-    } else {
-        solution.style.display = 'none';
-        button.innerHTML = '<i class="fas fa-chevron-right"></i> Ver Solución';
-    }
-}
-</script>
+<!-- Common CSS and JS for exercises -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/exercises.css">
+<script src="{{ site.baseurl }}/assets/js/common-exercises.js"></script>
 
 <footer class="content-footer">
     <div class="footer-content">

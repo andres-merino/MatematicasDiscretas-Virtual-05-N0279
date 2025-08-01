@@ -1,0 +1,334 @@
+/**
+ * Exercise-specific CSS styles
+ * Elements that are only used in exercise pages
+ * Common components moved to shared-components.css
+ */
+
+/* Content boxes moved to shared-components.css */
+
+/* content-box moved to shared-components.css */
+
+/* quote-box moved to shared-components.css */
+
+/* === TOGGLE BUTTONS === */
+/* toggle-btn moved to shared-components.css */
+
+/* === EXERCISE SOLUTIONS === */
+/* exercise-solution moved to shared-components.css */
+
+/* solution-toggle moved to shared-components.css */
+
+/* === SECTIONS === */
+/* section moved to shared-components.css */
+
+/* exercise-statement moved to shared-components.css */
+
+/* === STEP-BY-STEP SOLUTIONS (for translation exercises) === */
+/* step styles moved to shared-components.css */
+
+/* === PROPOSITIONS AND CONNECTORS GRIDS === */
+.propositions-grid {
+    display: grid;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.proposition-item {
+    display: flex;
+    align-items: center;
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #2196F3;
+}
+
+.prop-symbol {
+    font-weight: bold;
+    color: #2196F3;
+    margin-right: 10px;
+    min-width: 30px;
+}
+
+.prop-text {
+    color: #333;
+}
+
+.connectors-grid {
+    display: grid;
+    gap: 12px;
+    margin: 15px 0;
+}
+
+.connector-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    border-left: 3px solid #9C27B0;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.natural-lang {
+    color: #d32f2f;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.arrow {
+    color: #666;
+    font-weight: bold;
+}
+
+.formal-symbol {
+    color: #2196F3;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.connector-name {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* === FORMULA DISPLAYS === */
+.final-formula {
+    background-color: #f5f5f5;
+    border: 2px solid #2196F3;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.formula-explanation {
+    background-color: #e8f4fd;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.analysis-box {
+    background-color: #fff3e0;
+    border-left: 4px solid #FF9800;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+}
+
+/* === TRUTH TABLES (for conectores page) === */
+.compact-table {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.compact-table th,
+.compact-table td {
+    padding: 0.2rem 0.3rem;
+    border: 1px solid #dee2e6;
+    font-weight: 600;
+}
+
+.primary-header th {
+    background-color: var(--primary-color, #2196F3);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    border-color: var(--primary-color, #2196F3);
+}
+
+.result-header {
+    font-size: 0.7rem;
+}
+
+.result-true {
+    background-color: #d4edda;
+    color: #155724;
+    font-weight: bold;
+}
+
+.result-false {
+    background-color: #f8d7da;
+    color: #721c24;
+    font-weight: bold;
+}
+
+/* === COMPACT CARDS (for conectores page) === */
+.compact-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease-in-out;
+    background-color: var(--background-color, white);
+    max-width: 280px;
+    margin: 0 auto;
+}
+
+.compact-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.compact-card .card-header {
+    background-color: var(--background-color, white);
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.75rem 1rem;
+}
+
+.compact-card .card-header h5 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary-color, #2196F3);
+}
+
+.symbol {
+    font-size: 1.1rem;
+    margin-top: 0.25rem;
+    color: var(--secondary-color, #666);
+}
+
+.compact-card .card-body {
+    padding: 0.75rem;
+}
+
+.truth-table {
+    margin-bottom: 0.5rem;
+}
+
+/* === ALERT STYLES === */
+.alert-info {
+    background-color: var(--background-color, #e8f4fd);
+    border: 1px solid var(--primary-color, #2196F3);
+    border-left: 4px solid var(--primary-color, #2196F3);
+    color: var(--secondary-color, #333);
+    padding: 15px;
+    border-radius: 5px;
+    margin: 15px 0;
+}
+
+.alert-info h4 {
+    color: var(--primary-color, #2196F3);
+    margin-bottom: 1rem;
+}
+
+.alert-info strong {
+    color: var(--primary-color, #2196F3);
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    .compact-table {
+        font-size: 0.75rem;
+        width: 90%;
+    }
+    
+    .compact-card .card-header h5 {
+        font-size: 0.85rem;
+    }
+    
+    .compact-card {
+        max-width: 100%;
+    }
+    
+    .connector-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .step-header h3 {
+        font-size: 1rem;
+    }
+    
+    .step-number {
+        width: 25px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+    
+    .example-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .connective-symbol {
+        width: 30px;
+        height: 30px;
+        font-size: 1rem;
+    }
+}
+
+/* === TRANSLATION EXERCISES SPECIFIC STYLES === */
+.styled-list {
+    padding-left: 20px;
+}
+
+.styled-list li {
+    margin-bottom: 8px;
+}
+
+.connective-section {
+    margin-bottom: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.connective-section h3 {
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 15px;
+    border-bottom: 1px solid #e0e0e0;
+    display: flex;
+    align-items: center;
+}
+
+.connective-symbol {
+    background-color: #2196F3;
+    color: white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.example-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.example-item {
+    background-color: #f8f9fa;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border-left: 3px solid #2196F3;
+    font-style: italic;
+}
+
+.formula-box {
+    background-color: #e8f4fd;
+    border: 1px solid #2196F3;
+    border-radius: 6px;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.formula-box strong {
+    color: #2196F3;
+}
+
+/* === FOOTER STYLES === */
+/* === FOOTER STYLES === */
+/* Footer moved to shared-components.css */

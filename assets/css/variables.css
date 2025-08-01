@@ -1,0 +1,80 @@
+/**
+ * CSS Variables - MatematicasDiscretas Project
+ * Centralized color scheme and configuration
+ */
+
+:root {
+    /* Primary Color Palette */
+    --primary-color: #134383;
+    --primary-light: #1e5a9b;
+    --primary-hover: #0f3666;
+    
+    /* Secondary Colors */
+    --secondary-color: #666;
+    --accent-blue: #2196F3;
+    --accent-blue-light: #0984e3;
+    --accent-purple: #9C27B0;
+    --accent-green: #8BC34A;
+    --accent-orange: #FF9800;
+    
+    /* Background Colors */
+    --background-color: #f1f1f1;
+    --background-light: #fafbfc;
+    --background-white: #ffffff;
+    --box-background: rgba(218, 218, 218, 0.51);
+    
+    /* Content Box Colors */
+    --definition-bg: #e8f4fd;
+    --definition-border: #2196F3;
+    --theorem-bg: #f3e5f5;
+    --theorem-border: #9C27B0;
+    --explanation-bg: #f1f8e9;
+    --explanation-border: #8BC34A;
+    --warning-bg: #fff3e0;
+    --warning-border: #FF9800;
+    
+    /* Text Colors */
+    --text-primary: #24292e;
+    --text-secondary: #666;
+    --text-light: #495057;
+    --text-muted: #6a737d;
+    --text-white: #ffffff;
+    
+    /* Layout */
+    --max-width: 1000px;
+    --max-width-wide: 1200px;
+    --border-radius: 8px;
+    --border-radius-small: 5px;
+    --border-radius-large: 10px;
+    
+    /* Shadows */
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --hover-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    /* Spacing */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 10px;
+    --spacing-lg: 20px;
+    --spacing-xl: 30px;
+    --spacing-xxl: 40px;
+    
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+    --transition-slow: 0.5s ease;
+    
+    /* Typography */
+    --font-family: "Montserrat", sans-serif;
+    --font-size-sm: 0.85em;
+    --font-size-base: 1em;
+    --font-size-lg: 1.1em;
+    --font-size-xl: 1.2em;
+    --font-size-xxl: 1.4em;
+    
+    /* Responsive Breakpoints */
+    --breakpoint-mobile: 768px;
+    --breakpoint-tablet: 1012px;
+    --breakpoint-desktop: 1280px;
+}
