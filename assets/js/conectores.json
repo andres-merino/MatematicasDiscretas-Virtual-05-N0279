@@ -1,0 +1,18 @@
+[
+    { "nombre": "Conjunción (AND)", "simbolo": "p \\land q", "tabla": ["V", "F", "F", "F"], "descripcion": "Verdadero solo cuando ambas proposiciones son verdaderas." },
+    { "nombre": "Disyunción (OR)", "simbolo": "p \\lor q", "tabla": ["V", "V", "V", "F"], "descripcion": "Falso solo cuando ambas proposiciones son falsas." },
+    { "nombre": "Implicación", "simbolo": "p \\rightarrow q", "tabla": ["V", "F", "V", "V"], "descripcion": "Falso solo cuando p es verdadero y q es falso." },
+    { "nombre": "Bicondicional (XNOR)", "simbolo": "p \\leftrightarrow q", "tabla": ["V", "F", "F", "V"], "descripcion": "Verdadero cuando ambas proposiciones tienen el mismo valor de verdad." },
+    { "nombre": "Solo q", "simbolo": "q", "tabla": ["V", "F", "V", "F"], "descripcion": "Verdadero cuando q es verdadero, independientemente de p." },
+    { "nombre": "Solo p", "simbolo": "p", "tabla": ["V", "V", "F", "F"], "descripcion": "Verdadero cuando p es verdadero, independientemente de q." },
+    { "nombre": "Negación de p", "simbolo": "\\neg p", "tabla": ["F", "F", "V", "V"], "descripcion": "Verdadero cuando p es falso, independientemente de q." },
+    { "nombre": "Negación de q", "simbolo": "\\neg q", "tabla": ["F", "V", "F", "V"], "descripcion": "Verdadero cuando q es falso, independientemente de p." },
+    { "nombre": "Negación conjunta (NOR)", "simbolo": "\\neg p \\land \\neg q", "tabla": ["F", "F", "F", "V"], "descripcion": "Verdadero solo cuando ambas proposiciones son falsas." },
+    { "nombre": "Neg. implicación inversa", "simbolo": "\\neg (q \\rightarrow p)", "tabla": ["F", "F", "V", "F"], "descripcion": "Verdadero solo cuando q es verdadero y p es falso." },
+    { "nombre": "Neg. de implicación", "simbolo": "\\neg (p \\rightarrow q)", "tabla": ["F", "V", "F", "F"], "descripcion": "Verdadero solo cuando p es verdadero y q es falso." },
+    { "nombre": "Disyunción exclusiva (XOR)", "simbolo": "p \\oplus q", "tabla": ["F", "V", "V", "F"], "descripcion": "Verdadero cuando exactamente una de las proposiciones es verdadera." },
+    { "nombre": "Neg. conjunción (NAND)", "simbolo": "\\neg (p \\land q)", "tabla": ["F", "V", "V", "V"], "descripcion": "Falso solo cuando ambas proposiciones son verdaderas." },
+    { "nombre": "Implicación inversa", "simbolo": "q \\rightarrow p", "tabla": ["V", "V", "F", "V"], "descripcion": "Falso solo cuando q es verdadero y p es falso." },
+    { "nombre": "Contradicción", "simbolo": "\\mathbb{F}", "tabla": ["F", "F", "F", "F"], "descripcion": "Siempre falso, independientemente de los valores de p y q." },
+    { "nombre": "Tautología", "simbolo": "\\mathbb{T}", "tabla": ["V", "V", "V", "V"], "descripcion": "Siempre verdadero, independientemente de los valores de p y q." }
+]
