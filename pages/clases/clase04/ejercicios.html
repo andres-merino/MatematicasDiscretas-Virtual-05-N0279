@@ -1,0 +1,162 @@
+---
+layout: page
+title: "Ejercicios de Conjuntos"
+---
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h1>Ejercicios de Teoría de Conjuntos</h1>
+        <p class="lead">Practica conceptos fundamentales sobre conjuntos, igualdad y conjunto potencia.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-dumbbell"></i> Ejercicio 1: Igualdad de Conjuntos Básicos</h2>
+        
+        <div class="exercise-statement">
+            <div class="quote-box">
+                <p>¿Son iguales los conjuntos $\varnothing$ y $\{\varnothing\}$?</p>
+            </div>
+        </div>
+
+        <div class="solution-toggle">
+            <button class="toggle-btn" onclick="toggleSolution('solution1')">
+                <i class="fas fa-chevron-right"></i> Ver Solución
+            </button>
+        </div>
+
+        <div class="exercise-solution" id="solution1" style="display: none;">
+            <div class="content-box">
+                <p><strong>Solución:</strong></p>
+                <p>Notemos que $\varnothing \in \{\varnothing\}$, pero $\varnothing \notin \varnothing$.</p>
+                <p>El conjunto $\varnothing$ es el conjunto vacío (no contiene elementos), mientras que $\{\varnothing\}$ contiene un elemento: el conjunto vacío $\varnothing$.</p>
+                <p>En conclusión, los conjuntos $\varnothing$ y $\{\varnothing\}$ no son iguales.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-dumbbell"></i> Ejercicio 2: Conjuntos Anidados</h2>
+        
+        <div class="exercise-statement">
+            <div class="quote-box">
+                <p>¿Son iguales los conjuntos $\{\varnothing\}$ y $\{\{\varnothing\}\}$?</p>
+            </div>
+        </div>
+
+        <div class="solution-toggle">
+            <button class="toggle-btn" onclick="toggleSolution('solution2')">
+                <i class="fas fa-chevron-right"></i> Ver Solución
+            </button>
+        </div>
+
+        <div class="exercise-solution" id="solution2" style="display: none;">
+            <div class="content-box">
+                <p><strong>Solución:</strong></p>
+                <p>Notemos que $\{\varnothing\}$ contiene únicamente al elemento $\varnothing$, mientras que $\{\{\varnothing\}\}$ contiene únicamente al elemento $\{\varnothing\}$.</p>
+                <p>Para que los conjuntos sean iguales, sus elementos deben ser iguales. Por el Ejercicio 1, sabemos que $\varnothing \neq \{\varnothing\}$.</p>
+                <p>En conclusión, los conjuntos $\{\varnothing\}$ y $\{\{\varnothing\}\}$ no son iguales.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-dumbbell"></i> Ejercicio 3: Conjunto Potencia</h2>
+        
+        <div class="exercise-statement">
+            <div class="quote-box">
+                <p>Dado el conjunto $A = \{a,b,c\}$, determine $\mathcal{P}(A)$.</p>
+            </div>
+        </div>
+
+        <div class="solution-toggle">
+            <button class="toggle-btn" onclick="toggleSolution('solution3')">
+                <i class="fas fa-chevron-right"></i> Ver Solución
+            </button>
+        </div>
+
+        <div class="exercise-solution" id="solution3" style="display: none;">
+            <div class="content-box">
+                <p><strong>Solución:</strong></p>
+                <p>Listamos todos los subconjuntos de $A = \{a,b,c\}$ por número de elementos:</p>
+                <ul>
+                    <li>Cero elementos: $\varnothing$</li>
+                    <li>Un elemento: $\{a\}$, $\{b\}$, $\{c\}$</li>
+                    <li>Dos elementos: $\{a,b\}$, $\{a,c\}$, $\{b,c\}$</li>
+                    <li>Tres elementos: $\{a,b,c\}$</li>
+                </ul>
+                <p>Por lo tanto:</p>
+                $$\mathcal{P}(A) = \{ \varnothing, \{a\}, \{b\}, \{c\}, \{a,b\}, \{a,c\}, \{b,c\}, \{a,b,c\} \}.$$
+                <p>Podemos verificar que el total de subconjuntos es $2^3 = 8$. ✓</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-dumbbell"></i> Ejercicio 4: Conjuntos Potencia Anidados</h2>
+        
+        <div class="exercise-statement">
+            <div class="quote-box">
+                <p>Determine $\mathcal{P}(\varnothing)$, $\mathcal{P}(\mathcal{P}(\varnothing))$ y $\mathcal{P}(\mathcal{P}(\mathcal{P}(\varnothing)))$.</p>
+            </div>
+        </div>
+
+        <div class="solution-toggle">
+            <button class="toggle-btn" onclick="toggleSolution('solution4')">
+                <i class="fas fa-chevron-right"></i> Ver Solución
+            </button>
+        </div>
+
+        <div class="exercise-solution" id="solution4" style="display: none;">
+            <div class="content-box">
+                <p><strong>Solución:</strong></p>
+                
+                <p><strong>1. $\mathcal{P}(\varnothing)$:</strong></p>
+                <p>El único subconjunto de $\varnothing$ es $\varnothing$, por tanto: $\mathcal{P}(\varnothing) = \{\varnothing\}$.</p>
+                
+                <p><strong>2. $\mathcal{P}(\mathcal{P}(\varnothing))$:</strong></p>
+                <p>Los subconjuntos de $\{\varnothing\}$ son $\varnothing$ y $\{\varnothing\}$, por tanto: $\mathcal{P}(\mathcal{P}(\varnothing)) = \{ \varnothing, \{\varnothing\} \}$.</p>
+                
+                <p><strong>3. $\mathcal{P}(\mathcal{P}(\mathcal{P}(\varnothing)))$:</strong></p>
+                <p>Los subconjuntos de $\{ \varnothing, \{\varnothing\} \}$ son:</p>
+                <ul>
+                    <li>$\varnothing$ (conjunto vacío)</li>
+                    <li>$\{\varnothing\}$ (un elemento)</li>
+                    <li>$\{\{\varnothing\}\}$ (el otro elemento)</li>
+                    <li>$\{ \varnothing, \{\varnothing\} \}$ (conjunto completo)</li>
+                </ul>
+                
+                <p>Por lo tanto:</p>
+                $$\mathcal{P}(\mathcal{P}(\mathcal{P}(\varnothing))) = \{ \varnothing, \{\varnothing\}, \{\{\varnothing\}\}, \{ \varnothing, \{\varnothing\} \} \}.$$
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+function toggleSolution(solutionId) {
+    const solution = document.getElementById(solutionId);
+    const button = solution.previousElementSibling.querySelector('.toggle-btn');
+    const icon = button.querySelector('i');
+    
+    if (solution.style.display === 'none') {
+        solution.style.display = 'block';
+        button.innerHTML = '<i class="fas fa-chevron-down"></i> Ocultar Solución';
+    } else {
+        solution.style.display = 'none';
+        button.innerHTML = '<i class="fas fa-chevron-right"></i> Ver Solución';
+    }
+}
+</script>
+
+<footer class="content-footer">
+    <div class="footer-content">
+        <div class="credits">
+            <p><strong>Andrés Merino</strong></p>
+            <p>© 2025 | Pontificia Universidad Católica del Ecuador</p>
+            <p>Docente-Investigador</p>
+        </div>
+        <div class="footer-logo">
+            <img src="{{ site.baseurl }}/assets/icons/logoPUCE_04_b.png" alt="Logo PUCE" width="80">
+        </div>
+    </div>
+</footer>
