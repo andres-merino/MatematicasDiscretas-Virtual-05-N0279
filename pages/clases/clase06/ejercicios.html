@@ -1,0 +1,258 @@
+---
+layout: page
+title: "Relaciones"
+---
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h1>Ejercicios de Conceptos de Relaciones</h1>
+        <p class="lead">Practica conceptos fundamentales sobre relaciones. Los ejercicios han sido tomados del libro:</p>
+        <p class="lead">Epp, S. S. (2020). Discrete Mathematics with Applications (5.a ed.). Cengage Learning.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-dumbbell"></i> Ejercicio 1</h2>
+        
+        <div class="exercise-statement">
+            <div class="quote-box">
+                <p>La relación de congruencia módulo 3, $T$, se define de $\mathbb{Z}$ a $\mathbb{Z}$ como sigue: para todos los enteros $m$ y $n$,</p>
+                <p>$$m \, T \, n \iff 3 | (m - n).$$</p>
+                <p><strong>a.</strong> ¿Es $10 \, T \, 1$? ¿Es $1 \, T \, 10$? ¿Es $(2, 2) \in T$? ¿Es $(8, 1) \in T$?</p>
+                <p><strong>b.</strong> Enumere cinco enteros $n$ tal que $n \, T \, 0$.</p>
+                <p><strong>c.</strong> Liste cinco enteros $n$ tal que $n \, T \, 1$.</p>
+                <p><strong>d.</strong> Enumere cinco enteros $n$ tal que $n \, T \, 2$.</p>
+            </div>
+        </div>
+
+        <div class="solution-toggle">
+            <button class="toggle-btn" onclick="toggleSolution('solution1')">
+                <i class="fas fa-chevron-right"></i> Ver Solución
+            </button>
+        </div>
+
+        <div class="exercise-solution" id="solution1" style="display: none;">
+            <div class="content-box">
+                <p><strong>Solución:</strong></p>
+                
+                <p><strong>a.</strong> Evaluemos cada caso:</p>
+                <ul>
+                    <li>¿Es $10 \, T \, 1$?<br> Necesitamos verificar si $3 | (10 - 1) $, es decir, $3 | 9$. Como $9 = 3 \times 3$, tenemos que $3 | 9$, por lo tanto, <strong>sí</strong>, $10 \, T \, 1$.</li>
+                    <li>¿Es $1 \, T \, 10$?<br> Necesitamos verificar si $3 | (1 - 10)$, es decir, $3 | (-9)$. Como $-9 = 3 \times (-3)$, tenemos que $3 | (-9)$, por lo tanto, <strong>sí</strong>, $1 \, T \, 10$.</li>
+                    <li>¿Es $(2, 2) \in T$?<br> Necesitamos verificar si $3 | (2 - 2 )$, es decir, $3 | 0$. Como $0 = 3 \times 0$, tenemos que $3 | 0$, por lo tanto, <strong>sí</strong>, $(2, 2) \in T$.</li>
+                    <li>¿Es $(8, 1) \in T$?<br> Necesitamos verificar si $3 | (8 - 1)$, es decir, $3 | 7$. Como $7 = 3 \times 2 + 1$, el residuo es 1, entonces $3 \nmid 7$, por lo tanto, <strong>no</strong>, $(8, 1) \notin T$.</li>
+                </ul>
+                
+                <p><strong>b.</strong> Para que $n \, T \, 0$, necesitamos que $3 | (n - 0) = 3 | n$. Esto significa que $n$ debe ser múltiplo de 3. Así, puede ser $n \in \{0, 3, 6, -3, -6\}$.</p>
+                
+                <p><strong>c.</strong> Para que $n \, T \, 1$, necesitamos que $3 | (n - 1)$. Esto significa que $n - 1$ debe ser múltiplo de 3, es decir, $n \equiv 1 \pmod{3}$. Así, puede ser $n \in \{1, 4, 7, -2, -5\}$.</p>
+
+                <p><strong>d.</strong> Para que $n \, T \, 2$, necesitamos que $3 | (n - 2)$. Esto significa que $n - 2$ debe ser múltiplo de 3, es decir, $n \equiv 2 \pmod{3}$. Así, puede ser $n \in \{2, 5, 8, -1, -4\}$.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+    <h2><i class="fas fa-dumbbell"></i> Ejercicio 2</h2>
+    
+    <div class="exercise-statement">
+        <div class="quote-box">
+            <p>Sea $X = \{a, b, c\}$. Se define una relación $\Join$ sobre $\mathcal{P}(X)$ como sigue: Para todos $A, B \in \mathcal{P}(X)$,</p>
+            <p>$$A \Join B \iff A \cap B \neq \varnothing.$$</p>
+            <p><strong>a.</strong> ¿Es $\{a\} \Join \{c\}$?</p>
+            <p><strong>b.</strong> ¿Es $\{a, b\} \Join \{b, c\}$?</p>
+            <p><strong>c.</strong> ¿Es $\{a, b\} \Join \{a, b, c\}$?</p>
+        </div>
+    </div>
+
+    <div class="solution-toggle">
+        <button class="toggle-btn" onclick="toggleSolution('solution3')">
+            <i class="fas fa-chevron-right"></i> Ver Solución
+        </button>
+    </div>
+
+    <div class="exercise-solution" id="solution3" style="display: none;">
+        <div class="content-box">
+            <p><strong>Solución:</strong></p>
+            
+            <p><strong>a.</strong> Verificamos si $\{a\} \Join \{c\}$:</p>
+            <p>Tenemos $\{a\} \cap \{c\} = \emptyset$. Como la intersección es vacía, <strong>no</strong> se cumple $\{a\} \Join \{c\}$.</p>
+            
+            <p><strong>b.</strong> Verificamos si $\{a, b\} \Join \{b, c\}$:</p>
+            <p>Calculamos $\{a, b\} \cap \{b, c\} = \{b\}$. Como la intersección no es vacía, <strong>sí</strong> se cumple $\{a, b\} \Join \{b, c\}$.</p>
+            
+            <p><strong>c.</strong> Verificamos si $\{a, b\} \Join \{a, b, c\}$:</p>
+            <p>Calculamos $\{a, b\} \cap \{a, b, c\} = \{a, b\}$. Como la intersección no es vacía, <strong>sí</strong> se cumple $\{a, b\} \Join \{a, b, c\}$.</p>
+        </div>
+    </div>
+
+    <div class="section">
+    <h2><i class="fas fa-dumbbell"></i> Ejercicio 3</h2>
+    
+    <div class="exercise-statement">
+        <div class="quote-box">
+            <p>Sea $A$ el conjunto de todas las cadenas de 0, 1 y 2 de longitud 4. Defina una relación $R$ sobre $A$ como sigue: Para todas $s, t \in A$,
+            $$s \, R \, t \iff \text{la suma de los caracteres de } s \text{ es igual a la suma de los caracteres de } t.$$</p>
+            <p><strong>a.</strong> ¿Es $0121 \, R \, 2200$?</p>
+            <p><strong>b.</strong> ¿Es $1011 \, R \, 2101$?</p>
+            <p><strong>c.</strong> ¿Es $2212 \, R \, 2121$?</p>
+            <p><strong>d.</strong> ¿Es $1220 \, R \, 2111$?</p>
+        </div>
+    </div>
+
+    <div class="solution-toggle">
+        <button class="toggle-btn" onclick="toggleSolution('solution4')">
+            <i class="fas fa-chevron-right"></i> Ver Solución
+        </button>
+    </div>
+
+    <div class="exercise-solution" id="solution4" style="display: none;">
+        <div class="content-box">
+            <p><strong>Solución:</strong></p>
+            
+            <p><strong>a.</strong> Suma de caracteres:</p>
+            <ul>
+                <li>$0121$: $0 + 1 + 2 + 1 = 4$</li>
+                <li>$2200$: $2 + 2 + 0 + 0 = 4$</li>
+            </ul>
+            <p>Como ambas sumas son iguales, <strong>sí</strong> se cumple $0121 \, R \, 2200$.</p>
+            
+            <p><strong>b.</strong> Suma de caracteres:</p>
+            <ul>
+                <li>$1011$: $1 + 0 + 1 + 1 = 3$</li>
+                <li>$2101$: $2 + 1 + 0 + 1 = 4$</li>
+            </ul>
+            <p>Como las sumas son distintas, <strong>no</strong> se cumple $1011 \, R \, 2101$.</p>
+            
+            <p><strong>c.</strong> Suma de caracteres:</p>
+            <ul>
+                <li>$2212$: $2 + 2 + 1 + 2 = 7$</li>
+                <li>$2121$: $2 + 1 + 2 + 1 = 6$</li>
+            </ul>
+            <p>Como las sumas son distintas, <strong>no</strong> se cumple $2212 \, R \, 2121$.</p>
+            
+            <p><strong>d.</strong> Suma de caracteres:</p>
+            <ul>
+                <li>$1220$: $1 + 2 + 2 + 0 = 5$</li>
+                <li>$2111$: $2 + 1 + 1 + 1 = 5$</li>
+            </ul>
+            <p>Como ambas sumas son iguales, <strong>sí</strong> se cumple $1220 \, R \, 2111$.</p>
+        </div>
+    </div>
+<div class="section">
+    <h2><i class="fas fa-dumbbell"></i> Ejercicio 4</h2>
+    
+    <div class="exercise-statement">
+        <div class="quote-box">
+            <p>Sea $A = \{3, 4, 5\}$ y $B = \{4, 5, 6\}$ y sea $R$ la relación «menor que». Es decir, para toda $(x, y) \in A \times B$,
+            $$x \, R \, y \iff x < y.$$</p>
+            <p>Establezca explícitamente qué pares ordenados están en $R$ y en $R^{-1}$.</p>
+        </div>
+    </div>
+
+    <div class="solution-toggle">
+        <button class="toggle-btn" onclick="toggleSolution('solution5')">
+            <i class="fas fa-chevron-right"></i> Ver Solución
+        </button>
+    </div>
+
+    <div class="exercise-solution" id="solution5" style="display: none;">
+        <div class="content-box">
+            <p><strong>Solución:</strong></p>
+            
+            <p>Primero determinamos $R \subseteq A \times B$:</p>
+            <ul>
+                <li>$(3, 4)$, porque $3 < 4$</li>
+                <li>$(3, 5)$, porque $3 < 5$</li>
+                <li>$(3, 6)$, porque $3 < 6$</li>
+                <li>$(4, 5)$, porque $4 < 5$</li>
+                <li>$(4, 6)$, porque $4 < 6$</li>
+                <li>$(5, 6)$, porque $5 < 6$</li>
+            </ul>
+
+            <p>Por lo tanto,</p>
+            <p>$$R = \{(3,4), (3,5), (3,6), (4,5), (4,6), (5,6)\}.$$</p>
+
+            <p>Ahora determinamos $R^{-1} \subseteq B \times A$: $R^{-1}$ está formado por los pares ordenados $(y, x)$ tales que $(x, y) \in R$. Entonces:</p>
+            <ul>
+                <li>$(4, 3)\in R^{-1}$</li>
+                <li>$(5, 3)\in R^{-1}$</li>
+                <li>$(6, 3)\in R^{-1}$</li>
+                <li>$(5, 4)\in R^{-1}$</li>
+                <li>$(6, 4)\in R^{-1}$</li>
+                <li>$(6, 5)\in R^{-1}$</li>
+            </ul>
+
+            <p>Por lo tanto,</p>
+            <p>$$R^{-1} = \{(4,3), (5,3), (6,3), (5,4), (6,4), (6,5)\}.$$</p>
+        </div>
+    </div>
+
+    <div class="section">
+    <h2><i class="fas fa-dumbbell"></i> Ejercicio 5</h2>
+    
+    <div class="exercise-statement">
+        <div class="quote-box">
+            <p>Se define una relación $R$ sobre $A = \{0, 1, 2, 3\}$ por</p>
+            <p>$$R = \{(0,0), (1,2), (2,2)\}$$</p>
+            <p>y una relación $S$ sobre $B = \{a, b, c, d\}$ por</p>
+            <p>$$S = \{(a,b), (a,c), (b,c), (d,d)\}.$$</p>
+            <p>Escriba la representación matricial de las relaciones $R$ y $S$.</p>
+        </div>
+    </div>
+
+    <div class="solution-toggle">
+        <button class="toggle-btn" onclick="toggleSolution('solution6')">
+            <i class="fas fa-chevron-right"></i> Ver Solución
+        </button>
+    </div>
+
+    <div class="exercise-solution" id="solution6" style="display: none;">
+        <div class="content-box">
+            <p><strong>Solución:</strong></p>
+
+            <p>Para la relación $R$ sobre $A = \{0, 1, 2, 3\}$, la representación matricial de $R$ es:</p>
+            <p>
+            $$
+            M_R =
+            \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 0
+            \end{pmatrix}.
+            $$
+            </p>
+
+            <p>Para la relación $S$ sobre $B = \{a, b, c, d\}$, la representación matricial de $S$ es:</p>
+            <p>
+            $$
+            M_S =
+            \begin{pmatrix}
+            0 & 1 & 1 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 0 \\
+            0 & 0 & 0 & 1
+            \end{pmatrix}.
+            $$
+            </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Common CSS and JS for exercises -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/exercises.css">
+<script src="{{ site.baseurl }}/assets/js/common-exercises.js"></script>
+
+<footer class="content-footer">
+    <div class="footer-content">
+        <div class="credits">
+            <p><strong>Andrés Merino</strong></p>
+            <p>© 2025 | Pontificia Universidad Católica del Ecuador</p>
+            <p>Docente-Investigador</p>
+        </div>
+        <div class="footer-logo">
+            <img src="{{ site.baseurl }}/assets/icons/logoPUCE_04_b.png" alt="Logo PUCE" width="80">
+        </div>
+    </div>
+</footer>
