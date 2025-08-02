@@ -1,0 +1,306 @@
+---
+layout: page
+title: "Representación Matricial de una Relación"
+---
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h1>Representación Matricial de una Relación</h1>
+        <p class="lead">Aprende a representar relaciones usando matrices y cómo realizar operaciones con ellas.</p>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-book"></i> Definición: Representación Matricial de una Relación</h2>
+
+        
+        <div class="definition-box">
+            <div class="content-box">
+                <p><strong>Definición (Representación matricial de una relación):</strong></p>
+                <p>Sea $R$ una relación de $A$ en $B$, con $A$ y $B$ finitos. Si consideramos</p>
+                $$A = \{x_1,x_2,\ldots,x_m\} \text{ y } B = \{y_1,y_2,\ldots,y_n\}$$
+                <p>($|A|=m$ y $|B|=n$), se define la representación matricial de $R$ por la matriz $M_R = (m_{ij})$, elemento de $\mathbb{R}^{m\times n}$, definida por</p>
+                $$m_{ij}=
+                \begin{cases}
+                    1 &\text{si } x_iRy_j,\\
+                    0 &\text{si no.}
+                \end{cases}$$
+            </div>
+        </div>
+
+        <div class="explanation-box">
+            <div class="content-box">
+                <p>La representación matricial de una relación nos permite trabajar con relaciones utilizando álgebra matricial.</p>
+                <p>Cada entrada de la matriz $M_R$ es 1 si existe la relación entre los elementos correspondientes, y 0 en caso contrario.</p>
+            </div>
+        </div>
+
+        <h3><i class="fas fa-lightbulb"></i> Ejemplo</h3>
+
+        <div class="example-box">
+            <div class="content-box">
+                <p>Considera el conjunto $A = \{\text{Manzana}, \text{Banana}\}$ y el conjunto $B = \{\text{Rojo}, \text{Amarillo}, \text{Verde}\}$. Definamos una relación $R$ donde un elemento de $A$ está relacionado con un color de $B$ si puede tener ese color:</p>
+                <p>$$R = \{(\text{Manzana}, \text{Rojo}), (\text{Manzana}, \text{Verde}), (\text{Banana}, \text{Amarillo})\}.$$</p>
+                <p>La matriz $M_R$ sería:</p>
+                $$M_R = \begin{pmatrix}
+                    1 & 0 & 1 \\
+                    0 & 1 & 0
+                \end{pmatrix}.$$
+                <p>Aquí, la primera fila es para «Manzana» y la segunda para «Banana». Las columnas son para «Rojo», «Amarillo» y «Verde» respectivamente.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-theorem"></i> Proposición: Relación Inversa</h2>
+
+        <div class="theorem-box">
+            <div class="content-box">
+                <p><strong>Proposición:</strong></p>
+                <p>Sea $R$ una relación de $A$ en $B$, con $A$ y $B$ finitos. Se tiene que</p>
+                $$M_{R^{-1}} = (M_R)^T.$$
+            </div>
+        </div>
+
+        <div class="explanation-box">
+            <div class="content-box">
+                <p>Esto tiene mucho sentido: si $(x, y)$ está en $R$, entonces $(y, x)$ está en $R^{-1}$. Al transponer la matriz, lo que era una conexión de $x_i$ a $y_j$ (entrada $m_{ij}$) se convierte en una conexión de $y_j$ a $x_i$ (entrada $m_{ji}$ en la transpuesta).</p>
+            </div>
+        </div>
+
+        <h3><i class="fas fa-lightbulb"></i> Ejemplo</h3>
+        <div class="example-box">
+            <div class="content-box">
+                <p>Retomando nuestro ejemplo anterior, $M_R$ era:</p>
+                $$M_R = \begin{pmatrix}
+                    1 & 0 & 1 \\
+                    0 & 1 & 0
+                \end{pmatrix},$$
+                <p>entonces, la matriz de la relación inversa $M_{R^{-1}}$ (que nos diría qué colores están relacionados con qué frutas) sería:</p>
+                $$M_{R^{-1}} = (M_R)^T = \begin{pmatrix}
+                    1 & 0 \\
+                    0 & 1 \\
+                    1 & 0
+                \end{pmatrix}.$$
+                <p>Esta matriz nos muestra, por ejemplo, que «Rojo» está relacionado con «Manzana», «Amarillo» con «Banana», y «Verde» con «Manzana».</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-theorem"></i> Proposición: Inclusión de Relaciones</h2>
+
+        <div class="theorem-box">
+            <div class="content-box">
+                <p><strong>Proposición:</strong></p>
+                <p>Sean $R$ y $S$ relaciones de $A$ en $B$, con $A$ y $B$ finitos. Se tiene que</p>
+                $$R\subseteq S \quad\text{si y solo si}\quad M_R \leq M_S.$$
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="content-box">
+                <p><strong>¿Qué significa $M_R \leq M_S$?</strong> Significa que, si comparas cada entrada $m_{ij}$ de $M_R$ con la correspondiente entrada $s_{ij}$ de $M_S$, siempre se cumple que $m_{ij} \leq s_{ij}$. En otras palabras, si hay un 1 en $M_R$, debe haber un 1 en la misma posición en $M_S$. Si hay un 0 en $M_R$, puede haber un 0 o un 1 en $M_S$.</p>
+            </div>
+        </div>
+
+
+    <div class="section">
+        <h2><i class="fas fa-theorem"></i> Proposición: Composición de Relaciones y Producto Matricial</h2>
+
+        <div class="theorem-box">
+            <div class="content-box">
+                <p><strong>Proposición:</strong></p>
+                <p>Sean $R$ una relación de $A$ en $B$ y $S$ una relación de $B$ en $C$, con $A$, $B$ y $C$ conjuntos finitos. Se tiene que</p>
+                $$M_R M_S \text{ y } M_{S\circ R}$$
+                <p>tienen los mismos elementos distintos de $0$.</p>
+            </div>
+        </div>
+
+        <div class="warning-box">
+            <div class="content-box">
+                <p><strong>Importante:</strong> La entrada $(i,j)$ de la matriz $M_R M_S$ nos dice el <strong>número de «caminos»</strong> que existen entre el elemento $x_i$ de $A$ y el elemento $z_j$ de $C$ pasando por los elementos de $B$. Es como contar cuántas rutas diferentes puedes tomar para ir de $x_i$ a $z_j$ a través de un punto intermedio en $B$. Si este número es mayor que cero, significa que existe al menos un camino, y por lo tanto, una relación compuesta.</p>
+            </div>
+        </div>
+
+        <h3><i class="fas fa-lightbulb"></i> Ejemplo</h3>
+        <div class="example-box">
+            <div class="content-box">
+                <p>Sea $A = \{\text{Juan}\}$, $B = \{\text{Libro}, \text{Computadora}\}$, y $C = \{\text{Comprar}, \text{Leer}\}$.</p>
+                <p>Sea $R$ la relación «posee»: Juan posee Libro, Juan posee Computadora. Con esto, la matriz $M_R$ es:</p>
+                $$M_R = \begin{pmatrix}
+                    1 & 1
+                \end{pmatrix}.$$
+                <p>Sea $S$ la relación «se puede»: Libro se puede Leer, Computadora se puede Comprar, Computadora se puede Leer. Con esto, la matriz $M_S$ es:</p>
+                $$M_S = \begin{pmatrix}
+                    0 & 1 \\
+                    1 & 1
+                \end{pmatrix}.$$
+                <p>Ahora, calculamos el producto $M_R M_S$:</p>
+                $$M_R M_S = \begin{pmatrix}
+                    1 & 1
+                \end{pmatrix} \begin{pmatrix}
+                    0 & 1 \\
+                    1 & 1
+                \end{pmatrix} = \begin{pmatrix}
+                    (1 \cdot 0 + 1 \cdot 1) & (1 \cdot 1 + 1 \cdot 1)
+                \end{pmatrix} = \begin{pmatrix}
+                    1 & 2
+                \end{pmatrix}.$$
+                <p>Las entradas de $M_R M_S$ nos dicen:</p>
+                <ul>
+                    <li>La primera entrada (1) indica que hay 1 camino de «Juan» a «Comprar» (Juan posee Computadora, y Computadora se puede Comprar).</li>
+                    <li>La segunda entrada (2) indica que hay 2 caminos de «Juan» a «Leer» (Juan posee Libro, y Libro se puede Leer; Juan posee Computadora, y Computadora se puede Leer).</li>
+                </ul>
+                <p>La matriz de la composición $M_{S \circ R}$ (que nos diría qué puede hacer Juan con lo que posee) sería:</p>
+                $$M_{S \circ R} = \begin{pmatrix}
+                    1 & 1
+                \end{pmatrix}.$$
+                <p>Aquí, la primera entrada es 1 porque Juan puede Comprar (a través de la Computadora), y la segunda es 1 porque Juan puede Leer (a través del Libro o la Computadora). Como puedes ver, $M_{S \circ R}$ tiene 1s donde $M_R M_S$ tiene valores distintos de cero. La diferencia es que $M_R M_S$ cuenta los caminos, mientras que $M_{S \circ R}$ solo indica si un camino existe (1) o no (0).</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-theorem"></i> Corolario 1: Relación entre $M_{S \circ R}$ y $M_R M_S$</h2>
+
+        <div class="theorem-box">
+            <div class="content-box">
+                <p><strong>Corolario:</strong></p>
+                <p>Sean $R$ una relación de $A$ en $B$ y $S$ una relación de $B$ en $C$, con $A$, $B$ y $C$ conjuntos finitos. Se tiene que</p>
+                $$M_{S\circ R} \leq M_R M_S \quad\text{ y }\quad M_R M_S \leq |B| M_{S\circ R}.$$
+            </div>
+        </div>
+
+        <h3><i class="fas fa-lightbulb"></i> Ejemplo</h3>
+        <div class="example-box">
+            <div class="content-box">
+                <p>Usando el ejemplo anterior donde $M_R M_S = \begin{pmatrix} 1 & 2 \end{pmatrix}$ y $M_{S \circ R} = \begin{pmatrix} 1 & 1 \end{pmatrix}$.</p>
+                <p>Vemos que $M_{S \circ R} \leq M_R M_S$ se cumple, ya que $\begin{pmatrix} 1 & 1 \end{pmatrix} \leq \begin{pmatrix} 1 & 2 \end{pmatrix}$.</p>
+                <p>Además, $|B| = 2$. Así que $M_R M_S \leq |B| M_{S \circ R}$ se traduce a $\begin{pmatrix} 1 & 2 \end{pmatrix} \leq 2 \begin{pmatrix} 1 & 1 \end{pmatrix} = \begin{pmatrix} 2 & 2 \end{pmatrix}$, lo cual también es cierto.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="section">
+        <h2><i class="fas fa-theorem"></i> Corolario 2: Obtener $M_{S \circ R}$ a partir de $M_R M_S$</h2>
+
+        <div class="theorem-box">
+            <div class="content-box">
+                <p>Para obtener la matriz de la composición de relaciones $M_{S \circ R}$ a partir del producto de matrices $M_R M_S$, podemos usar la siguiente fórmula:</p>
+                $$M_{S\circ R} = \left\lceil \frac{1}{|B|} M_R M_S \right\rceil.$$
+            </div>
+        </div>
+
+        <div class="explanation-box">
+            <div class="content-box">
+                <p>Aquí, $\lceil \cdot \rceil$ es la <strong>función techo</strong> aplicada a cada elemento de la matriz. La función techo $\lceil x \rceil$ redondea $x$ al entero más cercano hacia arriba. Por ejemplo, $\lceil 0.5 \rceil = 1$, $\lceil 2 \rceil = 2$.</p>
+                <p>En el contexto de nuestras matrices, esto significa que cualquier entrada de $M_R M_S$ que sea mayor que cero (lo que indica que hay al menos un camino) se convertirá en 1 después de dividirla por $|B|$ y aplicar la función techo. Si es cero, seguirá siendo cero.</p>
+            </div>
+        </div>
+
+        <h3><i class="fas fa-lightbulb"></i> Ejemplo</h3>
+        <div class="example-box">
+            <div class="content-box">
+                <p>Retomando nuestro ejemplo, $M_R M_S = \begin{pmatrix} 1 & 2 \end{pmatrix}$ y $|B| = 2$.</p>
+                <p>Aplicando la fórmula:</p>
+                $$M_{S\circ R} = \left\lceil \frac{1}{2} \begin{pmatrix} 1 & 2 \end{pmatrix} \right\rceil = \left\lceil \begin{pmatrix} 0.5 & 1 \end{pmatrix} \right\rceil.$$
+                <p>Aplicando la función techo a cada elemento:</p>
+                $$M_{S\circ R} = \begin{pmatrix} \lceil 0.5 \rceil & \lceil 1 \rceil \end{pmatrix} = \begin{pmatrix} 1 & 1 \end{pmatrix}.$$
+                <p>Esto coincide con la matriz $M_{S \circ R}$ que obtuvimos directamente, demostrando la utilidad de esta fórmula.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2><i class="fas fa-theorem"></i> Corolario 3: Potencias de Relaciones</h2>
+
+        <div class="theorem-box">
+            <div class="content-box">
+                <p><strong>Corolario:</strong></p>
+                <p>Sean $R$ una relación sobre $A$, con $A$ un conjunto finito. Se tiene que</p>
+                $$M_{R^2} = \left\lceil \frac{1}{|A|} (M_R)^2 \right\rceil,$$
+                <p>además, si $n\in\mathbb{N}^*$,</p>
+                $$M_{R^n} = \left\lceil \frac{1}{|A|^{n-1}}(M_R)^n \right\rceil.$$
+            </div>
+        </div>
+
+        <div class="explanation-box">
+            <div class="content-box">
+                <p>Este corolario es muy útil porque nos permite determinar si existe una secuencia de $n$ relaciones entre dos elementos usando solo operaciones matriciales. Por ejemplo, $R^2$ nos diría si puedes ir de un elemento a otro en dos «pasos» a través de la relación $R$.</p>
+            </div>
+        </div>
+
+        <h3><i class="fas fa-lightbulb"></i> Ejemplo</h3>
+        <div class="example-box">
+            <div class="content-box">
+                <p>Sea $A = \{\text{A}, \text{B}, \text{C}\}$ y una relación $R$ en $A$ que representa «puede llegar a»:</p>
+                <ul>
+                    <li>A puede llegar a B.</li>
+                    <li>B puede llegar a C.</li>
+                    <li>C puede llegar a B.</li>
+                </ul>
+                <p>La matriz $M_R$ sería:</p>
+                $$M_R = \begin{pmatrix}
+                    0 & 1 & 0 \\
+                    0 & 0 & 1 \\
+                    0 & 1 & 0
+                \end{pmatrix}.$$
+                <p>Ahora, calculemos $(M_R)^2$ para ver los caminos de 2 pasos:</p>
+                $$(M_R)^2 = \begin{pmatrix}
+                    0 & 1 & 0 \\
+                    0 & 0 & 1 \\
+                    0 & 1 & 0
+                \end{pmatrix} \begin{pmatrix}
+                    0 & 1 & 0 \\
+                    0 & 0 & 1 \\
+                    0 & 1 & 0
+                \end{pmatrix} = \begin{pmatrix}
+                    0 & 0 & 1 \\
+                    0 & 1 & 0 \\
+                    0 & 0 & 1
+                \end{pmatrix}.$$
+                <p>Aquí, $|A| = 3$. Aplicamos la fórmula para $M_{R^2}$:</p>
+                $$M_{R^2} = \left\lceil \frac{1}{3} (M_R)^2 \right\rceil = \left\lceil \frac{1}{3} \begin{pmatrix}
+                    0 & 0 & 1 \\
+                    0 & 1 & 0 \\
+                    0 & 0 & 1
+                \end{pmatrix} \right\rceil = \left\lceil \begin{pmatrix}
+                    0 & 0 & 1/3 \\
+                    0 & 1/3 & 0 \\
+                    0 & 0 & 1/3
+                \end{pmatrix} \right\rceil.$$
+                <p>Aplicando la función techo a cada elemento:</p>
+                $$M_{R^2} = \begin{pmatrix}
+                    0 & 0 & 1 \\
+                    0 & 1 & 0 \\
+                    0 & 0 & 1
+                \end{pmatrix}.$$
+                <p>Esto nos dice, por ejemplo:</p>
+                <ul>
+                    <li>A puede llegar a C en 2 pasos (A $\to$ B $\to$ C).</li>
+                    <li>B puede llegar a B en 2 pasos (B $\to$ C $\to$ B).</li>
+                    <li>C puede llegar a C en 2 pasos (C $\to$ B $\to$ C).</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Common CSS and JS for exercises -->
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/exercises.css">
+<script src="{{ site.baseurl }}/assets/js/common-exercises.js"></script>
+
+<footer class="content-footer">
+    <div class="footer-content">
+        <div class="credits">
+            <p><strong>Andrés Merino</strong></p>
+            <p>© 2025 | Pontificia Universidad Católica del Ecuador</p>
+            <p>Docente-Investigador</p>
+        </div>
+        <div class="footer-logo">
+            <img src="{{ site.baseurl }}/assets/icons/logoPUCE_04_b.png" alt="Logo PUCE" width="80">
+        </div>
+    </div>
+</footer>

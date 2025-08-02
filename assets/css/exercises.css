@@ -329,6 +329,18 @@
     color: #2196F3;
 }
 
+/* === EXAMPLE HEADERS === */
+.section h3 {
+    color: var(--primary-color);
+    font-size: 1.4em;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+
+.section h3 i {
+    margin-right: 10px;
+}
+
 /* === FOOTER STYLES === */
 /* === FOOTER STYLES === */
 /* Footer moved to shared-components.css */
