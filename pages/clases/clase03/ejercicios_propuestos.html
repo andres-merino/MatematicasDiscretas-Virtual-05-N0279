@@ -16,6 +16,16 @@ title: "Ejercicios propuestos: Clase 03"
             <div class="quote-box">
                 <strong>Argumento 1</strong>
                     Si el sistema detecta múltiples intentos fallidos de acceso, se bloquea el usuario. El sistema detectó múltiples intentos fallidos de acceso. Por lo tanto, el usuario fue bloqueado.
+
+                <p><em>Esquema de deducción (respuesta modelo, en LaTeX):</em></p>
+                \[
+                \begin{array}{l}
+                	ext{1. } A \rightarrow B \\
+                	ext{2. } A \\
+                \hline
+                	ext{3. } B \quad(\text{de 1 y 2, Modus Ponens})
+                \end{array}
+                \]
             </div>
         </div>
 
@@ -23,6 +33,18 @@ title: "Ejercicios propuestos: Clase 03"
             <div class="quote-box">
                 <strong>Argumento 2</strong>
                 Siempre que una conexión provenga de una IP no segura o se excedan los umbrales de tráfico, se enviará una alerta. No se excedieron los umbrales de tráfico. Sin embargo, la conexión proviene de una IP no segura. Entonces, se enviará una alerta.
+
+                <p><em>Esquema de deducción (respuesta modelo, en LaTeX):</em></p>
+                \[
+                \begin{array}{l}
+                	ext{1. } (P \lor Q) \rightarrow R \\
+                	ext{2. } \neg Q \\
+                	ext{3. } P \\
+                	ext{4. } P \lor Q \quad(\text{de 3, introducción de disyunción}) \\
+                \hline
+                	ext{5. } R \quad(\text{de 1 y 4, Modus Ponens})
+                \end{array}
+                \]
             </div>
         </div>
 
@@ -30,6 +52,18 @@ title: "Ejercicios propuestos: Clase 03"
             <div class="quote-box">
                 <strong>Argumento 3</strong>
                 Si el servidor está caído, no se pueden procesar los datos. Si no se pueden procesar los datos, el informe no se genera. El servidor está caído. Por lo tanto, el informe no se genera.
+
+                <p><em>Esquema de deducción (respuesta modelo, en LaTeX):</em></p>
+                \[
+                \begin{array}{l}
+                	ext{1. } A \rightarrow B \\
+                	ext{2. } B \rightarrow C \\
+                	ext{3. } A \\
+                \hline
+                	ext{4. } B \quad(\text{de 1 y 3, Modus Ponens}) \\
+                	ext{5. } C \quad(\text{de 2 y 4, Modus Ponens})
+                \end{array}
+                \]
             </div>
         </div>
 
